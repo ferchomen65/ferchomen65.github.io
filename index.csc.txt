@@ -1,0 +1,95 @@
+:root {
+    --color-oro: #af944d;
+    --color-fondo: #fcfaf7;
+    --color-texto: #2c2c2c;
+    --fuente-serif: 'Playfair Display', serif;
+    --fuente-sans: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--fuente-sans);
+}
+
+.card {
+    background-color: var(--color-fondo);
+    width: 90%;
+    max-width: 500px;
+    padding: 60px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border: 1px solid #d4d4d4;
+    position: relative;
+    text-align: center;
+    opacity: 0; /* Para la animación con JS */
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    border: 1px solid var(--color-oro);
+    pointer-events: none;
+}
+
+.header-date {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: var(--color-oro);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: var(--fuente-serif);
+    font-size: 2.5rem;
+    color: var(--color-texto);
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.recipient {
+    font-family: var(--fuente-serif);
+    font-style: italic;
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.message {
+    line-height: 1.8;
+    color: var(--color-texto);
+    font-size: 1.1rem;
+    text-align: justify;
+    margin: 30px 0;
+}
+
+.signature-container {
+    margin-top: 50px;
+}
+
+.closing {
+    font-family: var(--fuente-serif);
+    font-size: 1.2rem;
+}
+
+.signature {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--color-oro);
+    font-size: 1.3rem;
+}
