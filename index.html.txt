@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicitación Formal - Amanda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <article class="card" id="birthdayCard">
+        <div class="header-date">28 de enero de 2026</div>
+        
+        <h1>Felicitaciones</h1>
+        
+        <span class="recipient">Estimada Amanda,</span>
+
+        <div class="message">
+            Es un verdadero privilegio poder expresarle mis más sinceros deseos en esta fecha tan significativa. Que este nuevo ciclo que inicia hoy esté colmado de salud, prosperidad y de la realización de cada uno de sus proyectos más anhelados.
+            <br><br>
+            Espero que este día sea el preámbulo de un año extraordinario y lleno de satisfacciones personales y profesionales.
+        </div>
+
+        <div class="closing">Con la mayor distinción,</div>
+        <div class="signature">[Tu Nombre Aquí]</div>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>
