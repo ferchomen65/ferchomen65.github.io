@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Amanda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #d4af37;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --text-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            /* Fondo Único: Gradiente animado dinámico */
+            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e, #1a1a2e);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Contenedor de la Carta (Efecto Vidrio) */
+        .card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 60px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Detalles Estéticos */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid var(--primary-gold);
+            border-radius: 15px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-gold);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .recipient {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        .message {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary-gold), transparent);
+            margin: 30px 0;
+        }
+
+        .footer {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--primary-gold);
+            letter-spacing: 1px;
+        }
+
+        /* Partículas flotantes sutiles */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Feliz Cumpleaños</h1>
+        <p class="recipient">Para: Amanda</p>
+        
+        <div class="divider"></div>
+
+        <div class="message">
+            Estimada Amanda,<br><br>
+            En esta fecha tan significativa, es un honor celebrar la excelencia y la luz que aportas a quienes te rodean. Que este nuevo año de vida esté colmado de éxitos, serenidad y momentos memorables. Tu presencia es un testimonio de elegancia y fortaleza.<br><br>
+            [Escribe aquí el resto de tu mensaje personalizado...]
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="footer">Con la más alta estima,</p>
+    </div>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const card = document.querySelector('.card');
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+    </script>
+</body>
+</html>
